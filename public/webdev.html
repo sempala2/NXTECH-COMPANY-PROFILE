@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body style="background-color: white;">
+    <div class="nav">
+        <nav>
+          <div class="logo">N<span class="blue">X</span>TECH</div>
+          <ul id="navi">
+            <a href="index.html"><li>Home</li></a>
+            <a href="services.html"><li>Services</li></a>
+            <a href="#"><li>Contact</li></a>
+          </ul>
+        </nav>
+        <div class="right">
+          <img src="menu.png" alt="menu" id="menu"/>
+        </div>
+      </div>
+    <main>
+        <section class="single">
+            <section class="sec1">
+                <article class="title">Web Developement</article>
+                <article class="brife-disc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure soluta vitae hic quisquam voluptates non?</article>
+                <button>Request A Call</button>
+            </section>
+            <section class="sec2">
+                <img src="./icon/undraw_Web_development_0l6v.png" alt="web">
+            </section>
+        </section>
+        <section class="full-disc">
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptate minima quidem consequuntur voluptates? Ut
+            commodi sit soluta fuga ab eligendi deserunt perspiciatis, quod quasi veniam alias nam neque impedit inventore, facere
+            nihil. Ullam fugit neque, eos dolore libero quos quas, cumque iste sequi, ab reprehenderit. Unde quasi iure deleniti
+            laudantium? Ex animi repellendus pariatur commodi veritatis quo deleniti hic corrupti</article><br />
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium voluptate minima quidem consequuntur voluptates? Ut commodi sit soluta fuga ab eligendi deserunt perspiciatis, quod quasi veniam alias nam neque impedit inventore, facere nihil. Ullam fugit neque, eos dolore libero quos quas, cumque iste sequi, ab reprehenderit. Unde quasi iure deleniti laudantium? Ex animi repellendus pariatur commodi veritatis quo deleniti hic corrupti distinctio minima iste est modi possimus error ea qui harum quibusdam eius laudantium quisquam iure nesciunt, adipisci aperiam. Amet facere excepturi molestiae commodi sit, est placeat, quasi cum voluptatem natus impedit enim omnis ipsa deserunt, ipsum soluta illum atque praesentium odit fuga porro laudantium alias? Alias esse quia earum illo mollitia illum, quo corrupti aut minus officia. Necessitatibus rerum tenetur sed ipsa veritatis, cumque asperiores quam atque optio eligendi repellat dolores sit temporibus ratione commodi nemo quis, expedita recusandae debitis aliquid, ea fuga. Dolor aliquid odit animi iste laudantium.</article><br />
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quidem atque expedita, ea, iure esse maiores sapiente quaerat perspiciatis sit officia est voluptate temporibus et. Fuga est expedita id.</article>
+            <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nemo quidem atque expedita, ea, iure esse maiores sapiente quaerat perspiciatis sit officia est voluptate temporibus et. Fuga est expedita id.</article>
+        </section>
+    </main>
+    <script src="code.jquery.com_jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+        $("#menu").click(function () {
+          $("#navi").toggleClass("active");
+          if ($("#navi").hasClass("active")) {
+            $("#menu").attr("src","x.png");
+          }else{
+            $("#menu").attr("src","menu.png");
+          }
+        });
+      });
+    </script>
+</body>
+</html>

@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <title>Contact Us</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://www.dafontfree.net/embed/cHJpc3RpbmEtcmVndWxhciZkYXRhLzEzL3AvNjUyMjcvUFJJU1RJTkEuVFRG" rel="stylesheet" type="text/css"/>
     <style>
       .body {
         height: 50%;
@@ -194,20 +196,20 @@
     <div class="banner">
       <div class="nav">
         <nav>
-          <div class="logo">N<span class="blue">X</span>TECH</div>
-          <ul>
-            <li>Home</li>
-            <li>Services</li>
-            <li>Contact</li>
+          <div class="logo">SC<span class="blue">E</span>C</div>
+          <ul id="navi">
+            <a href="index.html"><li>Home</li></a>
+            <a href="services.html"><li>Services</li></a>
+            <a href="#" style="color:#359af9;"><li>Contact</li></a>
           </ul>
         </nav>
         <div class="right">
-          <button class="loginbtn">login</button>
+          <img src="menu.png" alt="menu" id="menu"/>
         </div>
       </div>
       <div class="body">
         <div class="BannerTitle">
-          <h1 style="font-size: 3em; font-family: 'Lucida Sans'">
+          <h1 style="font-size: 3em; font-family: pristina">
             Let's Talk About It
           </h1>
         </div>
@@ -217,32 +219,32 @@
       </div>
       <div class="contacts">
         <div class="map">
-          <img style="width: 100%; height: 100%" src="gm.jpg" alt="" />
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.809932512003!2d32.56674887436962!3d0.11748596429849092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d8fb396ef2bad%3A0xaff8dcb9fe0ee1a3!2skids%20pioneer%20school!5e0!3m2!1sen!2sug!4v1685106503468!5m2!1sen!2sug" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="givecall">
           <h2>Give Us A Call</h2>
-          <p>256-708-162-770<br />256-708-162-770</p>
-          <p>companyemail@gmail.com</p>
+          <p>256-708-162-770</p>
+          <p>tanish@scec.tech</p>
           <p>Kawuku Entebbe road next to Kids Pioneer primary school</p>
         </div>
         <div class="pitchus">
           <h2>Pitch To Us</h2>
           <p>
-            Hello, my name is your name and contacts are your email and TEL and
-            I would like to discuss about this project
+            Hello, my name is <span class="blue">your name</span> and contacts are <span class="blue">your email</span> and <span class="blue">TEL</span> and
+            I would like to discuss about this <span class="blue">project</span>.
           </p>
-          <button class="stproject">start</button>
+          <a  href="#form"><button style="cursor: pointer;" class="stproject">start</button></a>
         </div>
       </div>
     </div>
     <div class="triangle" style="z-index: 0"></div>
     <main>
-      <h1>Start a coversation</h1>
+      <h1>Start a conversation</h1>
       <ul>
-        <li>less than 12-hours response time</li>
-        <li>detailed explanation to your questions</li>
+        <li>- less than 12-hours response time</li>
+        <li>- detailed explanation to your questions</li>
       </ul>
-      <form action="">
+      <form action="" id="form">
         <div class="row">
             <div class="in">
                 <label for="first">Full Names</label>
@@ -266,10 +268,23 @@
                         <label for="checkbox">Request Call</label>
                     <input style="width: 20px; height: 20px ; border: 5px solid black;" type="checkbox" name="checkbox" id="">
                     </div>
-                <input style="margin:0;" class="stproject" type="submit" value="submit">
+                <input  style="margin:0; cursor: pointer;" class="stproject" type="submit" value="submit">
             </div>
       </form>
       
     </main>
+    <script src="code.jquery.com_jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#menu").click(function () {
+          $("#navi").toggleClass("active");
+          if ($("#navi").hasClass("active")) {
+            $("#menu").attr("src","x.png");
+          }else{
+            $("#menu").attr("src","menu.png");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

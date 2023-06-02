@@ -1,6 +1,12 @@
 * {
-  z-index: 1;
+  /* z-index: 1; */
   font-family: sans-serif;
+}
+@font-face {
+  font-family: blocky;
+  src: url(blocky.otf);
+  src: url(blocky.ttf);
+  src: url(blocky.woff);
 }
 .root {
   padding-inline: 50px;
@@ -9,12 +15,13 @@
   background-color: #f4f4f4;
 }
 .banner {
-    position: relative;
+  position: relative;
   width: 100%;
+  z-index: 1;
   height: 100vh;
 }
 nav {
-  width: 80%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -27,10 +34,13 @@ ul {
   justify-content: space-evenly;
 }
 .logo {
-  font-size: 1.7em;
+  font-family: blocky;
+  font-size: 2em;
+  letter-spacing: 5px;
+  font-weight: 100;
 }
 .right {
-  width: 20%;
+  /* width: 20%; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -39,7 +49,7 @@ ul {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .slider {
   display: flex;
@@ -142,6 +152,10 @@ ul {
   display: flex;
   height: 100%;
 }
+@font-face {
+  font-family: pristina;
+  src: url(PRISTINA.TTF);
+}
 .BannerImg {
   margin-top: 5%;
   height: 50%;
@@ -151,7 +165,7 @@ ul {
   width: 50%;
 }
 .BannerImg img {
-  width: 70%;
+  width: 60%;
   height: auto;
 }
 button {
@@ -232,10 +246,25 @@ button {
   align-items: center;
   justify-content: center;
 }
+nav ul li:hover {
+  color: #0084ff;
+}
+#menu {
+  user-select: none;
+  width: 30px;
+  cursor: pointer;
+  display: none;
+  height: 30px;
+}
 .reachus .info {
   align-items: center;
   width: 50%;
   min-width: 300px;
+}
+ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: normal;
 }
 .reachus .info h1 {
   width: 100%;
@@ -244,12 +273,12 @@ button {
   margin: 0;
   margin-top: 5px;
 }
-.contact{
-    width: 100%;
+.contact {
+  width: 100%;
 }
-.contact>p{
-    width: 100% !important;
-    text-align: left;
+.contact > p {
+  width: 100% !important;
+  text-align: left;
 }
 .reachus .info p {
   width: 100%;
@@ -301,6 +330,9 @@ footer {
     margin-left: 5%;
     font-size: 1.1em;
   }
+  .right {
+    flex-direction: row-reverse;
+  }
   .root {
     padding-inline: 0;
   }
@@ -341,6 +373,9 @@ footer {
   .BannerTitle p {
     font-size: 1em;
   }
+  #menu {
+    display: block;
+  }
   .body {
     flex-direction: column;
   }
@@ -367,6 +402,29 @@ footer {
     width: 90%;
     align-items: center;
   }
+  .right {
+    width: 60%;
+  }
+  nav ul {
+    gap: 20px;
+    position: absolute;
+    width: 50%;
+    height: 30vh;
+    z-index: 999 !important;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    background-color: #ffffff;
+    top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    left: -100%;
+    border-radius: 5px;
+    padding-left: 50px;
+    font-size: 1rem;
+  }
+  nav ul.active {
+    left: 0;
+  }
   .v1 .circle {
     box-shadow: 3px 5px 10px #7c7c7c;
     width: 80px;
@@ -386,7 +444,7 @@ footer {
     width: 100%;
     justify-content: center;
   }
-  .services .card{
+  .services .card {
     width: 80%;
   }
 }
@@ -402,11 +460,11 @@ footer {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #359af9;
+  background: #164a7b;
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #0084ff;
+  background: #175896;
 }
