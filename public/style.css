@@ -145,7 +145,7 @@ ul {
   font-weight: 100;
 }
 .BannerTitle p {
-  font-size: 1.8em;
+  font-size: 1.3em;
   font-weight: 100;
 }
 .body {
@@ -213,6 +213,7 @@ button {
   display: flex;
   flex-direction: column;
 }
+
 .card img {
   width: 30%;
 }
