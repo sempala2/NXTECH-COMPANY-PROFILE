@@ -1,241 +1,539 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D9MN94NZ8K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D9MN94NZ8K');
-</script>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8621721957934319"
-     crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
-    <title>SCEC</title>
-    <style>
-      @media (max-width: 700px) {
-        .stproject {
-          display: none;
-        }
-      }
-    </style>
+    <title>SCEC TECHNOLOGIES</title>
   </head>
-  <body style="margin: 0">
+  <script src="mburger.js" type="module"></script>
+  
+  <link type="text/css" rel="stylesheet" href="mburger.css">
+
+  <style>
+    * {
+      font-family: sans-serif;
+      color: white;
+    }
+    body {
+      background-color: rgb(8, 0, 36);
+      overflow-x: hidden !important;
+    }
+    .root {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    main button {
+      background-color: #fff000;
+      color: black;
+      border: none;
+      padding: 10px 30px;
+      width: fit-content;
+      height: fit-content;
+      font-weight: 500;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+    header {
+      width: 90%;
+      padding: 10px 30px;
+      display: flex;
+      align-items: center;
+      height: 80px;
+      justify-content: space-between;
+    }
+    header a {
+      font-size: 1.3em;
+      text-align: center;
+      text-decoration: none;
+    }
+    .logo {
+      height: 50px;
+    }
+    .left {
+      display: flex;
+      width: 70%;
+      gap: 5%;
+      align-items: center;
+    }
+    .logo img {
+      width: auto;
+      height: 100%;
+    }
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+    }
+    main {
+      width: 95%;
+    }
+    main section.first {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    main section.second {
+      margin-top: 7%;
+      display: flex;
+      align-items: center;
+    }
+    main section.second img {
+      width: 60%;
+      transform: translateX(20%);
+    }
+    main section.second .info {
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 50%;
+    }
+    @keyframes shake {
+      0% {
+        transform: translateX(120%) translateY(-20%);
+      }
+      100% {
+        transform: translateY(-25%) translateX(115%);
+      }
+    }
+    .bst::before {
+      content: "";
+      background-image: url(ship.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      display: inline-block;
+      width: 50px !important;
+      position: absolute;
+      z-index: -10;
+      animation: shake 0.5s linear infinite;
+      height: 50px !important;
+    }
+    .headtext {
+      margin-top: 5%;
+      z-index: 1;
+      width: 40%;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: 300;
+      letter-spacing: 5px;
+      margin-bottom: 0;
+    }
+    .info .headtext {
+      width: 100%;
+      font-weight: bolder;
+      text-align: left;
+    }
+    .info .headp {
+      width: 100%;
+      text-align: left;
+    }
+    .moon {
+      position: absolute;
+      left: -10%;
+      z-index: -10;
+      width: 50%;
+      animation: rotate 220s infinite forwards;
+    }
+    .moon img {
+      width: 100%;
+      height: 100%;
+    }
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    .mars {
+      position: absolute;
+      right: -10%;
+      z-index: -10;
+      width: 50%;
+      animation: rotate 200s infinite forwards;
+    }
+    .mars img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .polygon {
+      position: absolute;
+      right: 5%;
+      top: 100px;
+      z-index: -10;
+      animation: rotate 200s infinite linear;
+      width: 8%;
+    }
+    .polygon img {
+      width: 100%;
+      box-shadow: #fff000 0px 0px 20px;
+      border-radius: 50%;
+      background-color: #fff000;
+      height: 100%;
+    }
+    .headp {
+      width: 70%;
+      text-align: center;
+    }
+    nav ul li {
+      font-size: 1.2em;
+    }
+    .blue {
+      color: rgb(0, 153, 255);
+    }
+    section.third {
+      margin-top: 7%;
+      gap: 20px;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    section.third h1 {
+      font-weight: 300;
+      font-size: 2em;
+      letter-spacing: 3px;
+    }
+    section.third .list .icon img {
+      width: 90px;
+    }
+    section.third .list {
+      width: 80%;
+      display: flex;
+      overflow-x: hidden;
+      justify-content: space-evenly;
+    }
+    section.third .list .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+    }
+    #menu {
+      height: 40px;
+      width: auto;
+      cursor: pointer;
+      display: none;
+    }
+    #menu img {
+      width: 100%;
+      height: 100%;
+    }
+    a{
+      text-decoration: none;
+    }
+    section.fourth {
+      margin-top: 7%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    section.fourth h1 {
+      font-weight: 300;
+      font-size: 2em;
+      letter-spacing: 3px;
+    }
+    section.fourth .projects .project img {
+      width: 50%;
+    }
+    section.fourth .projects .project {
+      display: flex;
+      align-items: center;
+      gap: 5%;
+      margin: 20px 0;
+      justify-content: center;
+    }
+    section.fourth .projects .project .inf {
+      width: 40%;
+    }
+    section.fourth .projects .project .inf h1,
+    h4 {
+      margin: 0;
+    }
+    h4 {
+      color: #ffffff9c;
+    }
+    .project .inf button {
+      background: none;
+      color: white;
+      border: #fff000 1px solid;
+    }
+    footer {
+      padding: 10px;
+      display: flex;
+      background-color: black;
+      justify-content: space-between;
+    }
+    @media (max-width: 700px) {
+      .logo {
+        height: 30px;
+      }
+      #navi{
+        display: flex;
+        background-color: #0059ff;
+        border-radius: 0 5px 5px 0;
+        position: absolute;
+        left: -100%;
+        padding: 20px 100px;
+        transition: all 0.5s linear;
+      }
+      .navshow{
+        left: 0 !important;
+      }
+      nav ul {
+        display: flex;
+        z-index: 999;
+        flex-direction: column;
+        list-style-type: none;
+        gap: 20px;
+      }
+      .headtext {
+        font-weight: bold;
+        font-size: 1.8em;
+        width: 100%;
+      }
+      h1{
+        font-weight: bold !important;
+        font-size: 1.8em !important;
+      }
+      .headp {
+        width: 100%;
+      }
+      main section.second {
+        margin-top: 7%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      main section.second .info {
+        align-items: center;
+        width: 90%;
+        gap: 5px;
+      }
+      main section.second img {
+        margin-top: 7%;
+        width: 100%;
+        transform: translateX(20%);
+      }
+      .info h1,
+      .info p {
+        align-self: center;
+        width: 100%;
+        text-align: center !important;
+      }
+      section.third .list {
+        margin-top: 2%;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-content: center;
+      }
+      section.third .list .icon {
+        align-items: center;
+        justify-content: center;
+      }
+      bordy {
+        overflow-x: hidden;
+      }
+      .root {
+        overflow-x: hidden;
+      }
+      main {
+        width: 100%;
+        overflow-x: hidden;
+      }
+      .moon {
+        width: 70%;
+        animation: rotate 120s infinite forwards;
+      }
+      .mars {
+        width: 70%;
+        animation: rotate 120s infinite forwards;
+      }
+      section.fourth .projects .project {
+        display: flex;
+        align-items: center;
+        flex-direction: column !important;
+        gap: 5%;
+        margin: 20px 0;
+        justify-content: center;
+      }
+      .polygon {
+        width: 20%;
+      }
+      section.fourth .projects .project .inf {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+      }
+      section.fourth .projects .project img {
+        width: 90%;
+        margin: 10px;
+      }
+      #menu {
+        display: block;
+      }
+      .map {
+        width: 100%;
+      }
+      .map iframe {
+        width: 100%;
+      }
+      footer {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  <body>
     <div class="root">
-      <div class="top">We offer hosting plans for as low as UGx80,000</div>
-      <div class="banner">
-        <div class="nav">
+      <header>
+        <div class="left">
+          <div class="logo">
+            <img src="img/logo.png" alt="" />
+          </div>
           <nav>
-            <div class="logo">SC<span class="blue">E</span>C <br><span class="lsmall">Technologies</span></div>
             <ul id="navi">
-              <a href="#" style="color: #359af9"><li>Home</li></a>
-              <a href="projects.html"><li>Projects</li></a>
-              <a href="contact.html"><li>Contact</li></a>
+              <li><a href="#">Home</a></li>
+              <li><a href="#abtus">About Us</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </nav>
-          <div class="right">
-            <img src="menu.png" alt="menu" id="menu" />
-          </div>
         </div>
-        <div class="body">
-          <h1>You Dream it. We Build it.</h1>
-          <p>Empower your dreams with our expertise in modern technologies, turning ideas into tech-driven realities for your digital success.</p>
-          <div class="butns">
-            <a href="projects.html"><button>Our Projects</button></a>
-            <a href="contact.html"><button>Contact Us</button></a>
-          </div>
-          
+        <a href="contact.html">Hire Us</a>
+        <div id="menu">
+          <m-burger fx="spin" menu="menu"></m-burger>
         </div>
-      </div>
+      </header>
       <main>
-        <h2 id="hd" class="heading">
-          Let us Focus on Tech <br /><span class="light"
-            >You Focus On What Truly Matters.</span
-          >
-        </h2>
-        <p class="paragraph">
-          We have experts ready to bring your Idea to life, all the way from our
-          kick off meeting to final handoff.
-        </p>
-        <section>
-          <div class="services">
-            <div class="card">
-              <img src="webd.png" alt="" />
-              <h3>Web & App Development</h3>
-              <p>
-                We design all sorts of websites and Mobile Apps from personal to
-                company.
-              </p>
-            </div>
-
-            <div class="card">
-              <img style="width:40%;" src="digitalm.png" alt="" />
-              <h3>Digital Marketing</h3>
-              <p>
-                We manage the marketing of your business online to boost your
-                sales.
-              </p>
-            </div>
-
-            <div class="card">
-              <img src="designing.png" alt="" />
-              <h3>Graphics and Branding</h3>
-              <p>
-                We design Business Cards, Posters, Logos, Flyers and all sorts
-                of Graphics products.
-              </p>
-            </div>
+        <section class="first">
+          <div class="moon">
+            <img src="img/moon.png" alt="" />
           </div>
+          <h1 class="headtext">
+            <span class="bst">Boost</span> Your
+            <span class="blue">Online Presence</span> With Us
+          </h1>
+          <p class="headp">
+            Empower your dreams with our expertise in modern technologies,
+            turning ideas into tech-driven realities for your digital success.
+          </p>
+          <button><a href="#abtus" style="color: black;">What We Do</a></button>
         </section>
-        <section
-          style="
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <h2 style="width: 100%; text-align: center">Core Values</h2>
-          <div class="values">
-            <div class="v1">
-              <div class="circle"></div>
-              <div class="info">
-                <h3>Creativity</h3>
-                <p>
-                  We specialize in being creative. Together we will design
-                  something unique that suits your desires.
-                </p>
-              </div>
-            </div>
-            <div class="v1 rev">
-              <div class="circle"></div>
-              <div class="info">
-                <h3>Commitment</h3>
-                <p>
-                  We are committed to working on your project and delivering the
-                  final product on time and on budget.
-                </p>
-              </div>
-            </div>
-            <div class="v1">
-              <div class="circle"></div>
-              <div class="info">
-                <h3>Communication</h3>
-                <p>
-                  We keep communications between us and our clients open all the time.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section>
-          <h2 style="text-align: center">Our Working Process</h2>
-          <div class="process">
-            <div class="card">
-              <img src="meeting.png" alt="" />
-              <h2>1. Meeting</h2>
-              <p>We setup a meeting and discuss your next big project.</p>
-            </div>
-
-            <div class="card">
-              <img src="planning.png" alt="" />
-              <h2>2. Planning</h2>
-              <p>
-                Our team comes up with a plan on how to work on your project.
-              </p>
-            </div>
-
-            <div class="card">
-              <img src="designing.png" alt="" />
-              <h2>3. Designing</h2>
-              <p>We work on a prototype design for your unique project.</p>
-            </div>
-            <div class="card">
-              <img src="develop.png" alt="" />
-              <h2>4. Development</h2>
-              <p>
-                We kick off the Coding to deliver the best out of your
-                project idea.
-              </p>
-            </div>
-
-            <div class="card">
-              <img src="deploy.png" alt="" />
-              <h2>5. Deployment</h2>
-              <p>
-                After Coding is complete and you are happy that your vision has been realised, we then deliver or launch your
-                project.
-              </p>
-            </div>
-
-            <div class="card">
-              <img src="support.png" alt="" />
-              <h2>6. Support and Maintenance</h2>
-              <p>
-                We offer 24/7 support and maintainance for your project from its
-                release.
-              </p>
-            </div>
-          </div>
-        </section>
-        <section style="padding-inline: 5%">
-          <div class="reachus">
-            <div class="info">
-              <h1 style="font-family: blocky; letter-spacing: 5px">
-                SC<span class="blue">E</span>C
-              </h1>
-              <p>We have the experts ready to bring your project to life</p>
-              <div class="contact">
-                <p>(+256)708162770</p>
-                <p>tanish@scec.tech</p>
-                <a href="contact.html"
-                ><button
-                  style="
-                    border-radius: 5px;
-                    padding: 10px;
-                    padding-inline: 30px;
-                    background-color: #359af9;
-                    color: white;
-                    margin: 5px 0 10px 0;
-                    cursor: pointer;
-                  "
-                >
-                  Contact Us
-                </button></a
+        <section class="second" id="abtus">
+          <div class="info">
+            <h1 class="headtext">
+              WE <span class="blue">DESIGN</span><br />DEVELOP<br /><span
+                class="blue"
+                >PROMOTE</span
               >
+            </h1>
+            <p class="headp">
+              We create An online presence for your business from branding to Web Designing to Digital marketing.
+            </p>
+            <button><a href="contact.html" style="color: black;">Get In Touch</a></button>
+          </div>
+          <img src="img/laptop.png" alt="" />
+        </section>
+        <section class="third">
+          <h1>What We Do</h1>
+          <div class="list">
+            <div class="icon">
+              <img src="img/graphics.png" alt="" />
+              <p>Graphics Designing</p>
+            </div>
+            <div class="mars">
+              <img src="img/mars.png" alt="" />
+            </div>
+            <div class="icon">
+              <img src="img/digital marketing.png" alt="" />
+              <p>Digital Marketing</p>
+            </div>
+
+            <div class="icon">
+              <img src="img/web design.png" alt="" />
+              <p>Website Designing</p>
+            </div>
+
+            <div class="icon">
+              <img src="img/hosting.png" alt="" />
+              <p>Website Hosting</p>
+            </div>
+          </div>
+        </section>
+        <section class="fourth">
+          <h1>What We Have Done</h1>
+          <div class="projects">
+            <div class="project">
+              <img src="img/ngo website.png" alt="" />
+              <div class="inf">
+                <h2>Trophy Youth Empowerment</h2>
+                <h4>Web Design</h4>
+                <p>
+                  An NGO dedicated to improving the lives of youths around Uganda and Africa in 
+                  general.
+                </p>
+                <button>View Project</button>
               </div>
             </div>
-            <div class="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15959.240088663008!2d32.5690812!3d0.1168564!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d8facfe517617%3A0xc0f205d116761762!2sscec%20technologies%20it%20solutions!5e0!3m2!1sen!2sug!4v1685716750091!5m2!1sen!2sug" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              
+
+            <div class="project" style="flex-direction: row-reverse">
+              <img src="img/highlands.png" alt="" />
+              <div class="inf">
+                <h2>Highlands General Enterprises</h2>
+                <h4>Web Design</h4>
+                <p>
+                  A Contruction company aimed at building mordern infrasture in all parts of the country delivering trust and professionalism.
+                </p>
+                <button>View Project</button>
+              </div>
             </div>
           </div>
         </section>
       </main>
+      <!-----End of root class-------->
+      <div class="polygon">
+        <img src="img/sun2.png" alt="" />
+      </div>
     </div>
     <footer>
-      <center>
-        <span style="font-family: blocky; letter-spacing: 5px">SCEC</span>
-        TECHNOLOGIES
-      </center>
+      <div class="company">
+        <div class="logo">
+          <img src="img/logo.png" alt="" />
+        </div>
+        <p>
+          Let Us Fous On Tech<br />
+          You Focus On What Truly Matters
+        </p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+              <li><a href="#abtus">About Us</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.6689641245066!2d32.56650627432247!3d0.11686176429932298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177d8facfe517617%3A0xc0f205d116761762!2sscec%20technologies%20it%20solutions!5e1!3m2!1sen!2sug!4v1690751821595!5m2!1sen!2sug" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </footer>
-    <script src="code.jquery.com_jquery-3.6.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
       $(document).ready(function () {
-        $("#menu").click(function () {
-          $("#navi").toggleClass("active");
-          if ($("#navi").hasClass("active")) {
-            $("#menu").attr("src", "x.png");
-          } else {
-            $("#menu").attr("src", "menu.png");
-          }
-        });
+        $('#menu').click(function () {
+          console.log("something")
+          $('#navi').toggleClass("navshow");
+        })
       });
     </script>
   </body>
