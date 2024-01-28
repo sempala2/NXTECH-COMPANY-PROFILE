@@ -54,7 +54,7 @@
         align-items: center;
       }
       header nav .logo {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         display: flex;
         justify-content: space-between;
       }
@@ -64,6 +64,10 @@
       }
       .pp ul {
         gap: 30px;
+      }
+      .pp ul li a{
+        color: white;
+        text-decoration: none;
       }
       nav ul {
         font-size: 1.15rem;
@@ -129,7 +133,7 @@
       }
       section.detail{
         display: flex;
-        padding: 7% 2%;
+        padding: 5% 2%;
         align-items: center;
         justify-content: space-around;
         width: 100%;
@@ -211,6 +215,9 @@
         display: flex;
         justify-content: space-around;
       }
+      .w-card b{
+        color: #2b0000b1;
+      }
       .w-list{
         margin-top: 3%;
         display: flex;
@@ -220,6 +227,10 @@
       }
       .w-list hr{
         margin: 30px 0;
+      }
+      .list a{
+        color: white;
+        text-decoration: none;
       }
       .w-card img{
         width: 40%;
@@ -269,16 +280,20 @@
         margin: 20px 5px;
       }
       footer nav .list {
+        align-self: last baseline;
         display: flex;
-        width: 20%;
-        flex-direction: column;
+        width: 50%;
+        flex-direction: flex;
+        justify-content: space-around;
       }
 
       #menu a{
         text-decoration: none ;
         color: white;
       }
-
+      .hide{
+        display: none;
+      }
       @media (max-width: 650px) {
         #menu a {
           width: 95%;
@@ -292,7 +307,9 @@
           align-self: center;
           margin: 10px 10px;
         }
-
+        header{
+          height: fit-content;
+        }
         header nav {
           align-items: center;
           justify-content: center;
@@ -341,11 +358,18 @@
         footer nav {
           width: 90%;
         }
-        footer nav .logo {
-          width: 100%;
+        footer nav .logo{
+          width: 90%;
         }
         footer nav .list {
-          width: 100%;
+          flex-direction: column;
+          gap: 10px;
+          width: 95%;
+        }
+        nav .list a{
+          width: 90%;
+          font-size: 1.2rem;
+          text-align: left;
         }
         footer .pp {
           align-items: center;
@@ -359,10 +383,60 @@
           padding-left: 0;
           margin-top: 10px;
           font-size: 0.9rem;
-          text-decoration: underline;
         }
         #burger-menu {
           display: block !important;
+        }
+        #menu button{
+          display: block;
+        }
+        .w-card{
+          flex-wrap: wrap;
+        }
+        .w-card img{
+          width: 100%;
+        }
+        .w-card .info{
+          width: 100%;
+        }
+        section.services{
+          padding:10% 10%;
+        }
+        section.services .card{
+          width: 100%;
+          padding: 10px;
+        }
+        section.services .card:last-child{
+          display: none;
+        }
+        section.services .about{
+          width: 90%;
+        }
+        .hero .info1{
+          flex-direction: column-reverse;
+        }
+        .hero .info1 .img{
+          width: 100%;
+        }
+        .info1 .info{
+          width: 100% !important;
+        }
+        section.detail{
+          flex-direction: column;
+          align-items: center;
+        }
+        section.detail div.detail{
+          width: 90%;
+          gap: 3%;
+        }
+        section.detail div.about{
+          width: 90%;
+        }
+        button.big{
+          display: none;
+        }
+        .contact-info{
+          width: 90%;
         }
       }
       #burger-menu {
@@ -432,93 +506,98 @@
       <header>
         <nav>
           <div class="logo">
-            Website logo
+            SCEC TECHNOLOGIES
             <div id="burger-menu">
               <span></span>
             </div>
           </div>
-          <ul id="menu">
-            <a href=""><li>Browse</li></a>
-            <a href=""><li>Login</li></a>
-            <a href=""><li>Register</li></a>
-            <a href=""><li>Sell</li></a>
+          <ul id="menu">  
+            <a href=""><li>Home</li></a>
+            <a href="#abt-us"><li>About Us</li></a>
+            <a href="#services"><li>Services</li></a>
+            <a href=""><li>Reviews</li></a>
+            <a href="#contact"><button class="hide">Let's Talk</button></a>
           </ul>
-          <button>Let's Talk</button>
+          <a href="#contact"><button class="big">Let's Talk</button></a>
         </nav>
         <div class="hero">
           <div class="info1">
             <div class="info">
               <p>Best in Kampala <span class="orange">#1</span></p>
               <h1>SCEC<br>TECHNOLOGIES</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat autem quibusdam ipsam molestias architecto quasi natus itaque. Culpa impedit ad rem, voluptas illo earum cumque numquam, repudiandae, sed vitae eaque.</p>
-              <button>Explore</button>
+              <p>Empower your dreams with our expertise in modern technologies, turning ideas into tech-driven realities for your digital success.</p>
+              <a href="#work"><button>Explore</button></a>
             </div>
             <div class="img">
-              <img src="img/hero1.png" alt="">
+              <img src="img/hero1.jpeg" alt="">
             </div>
           </div>
         </div>
       </header>
       <main>
-        <section class="detail">
+        <section class="detail" id="abt-us">
           <div class="about">
-            <h2>Leading In Digital<br>Marketing</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Providena velit? Sed nesciunt esse amet enim officia voluptatibus.</p>
+            <h2>Leading In Website<br>Designing</h2>
+            <p>We craft online presences from branding to web design and digital marketing.</p>
           </div>
+          
           <div class="detail">
             <div class="d1">
-              <h4>5+ years</h4>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
+              <h4>5+ Years</h4>
+              <p>Over 5 years of expert digital solutions.</p>
             </div>
             <div class="d1">
               <h4>5.0</h4>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
+              <p>Excellence with a perfect 5.0 rating.</p>
             </div>
             <div class="d1">
               <h4>20+ Clients</h4>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing</p>
+              <p>Trusted by 20+ satisfied businesses.</p>
             </div>
           </div>
+          
+          
         </section>
 
         <section class="video">
-          <iframe width="100%" height="400" style="object-position: center;" src="https://www.youtube.com/embed/G5QdOWHkkBU?si=YoGQRJb4xhNnSnxd?showinfo=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <video style="width: 100%; height: 400px; background-color: #474747;" controls src="img/web.MP4"></video>
         </section>
-        <section class="services">
+        <section class="services" id="services">
           <div class="about">
             <h3>Our Services</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam hic iusto quaerat eveniet temporibus voluptas, sed, accusamus</p>
+            <p>Empower your brand online with our comprehensive digital solutions, uniting strategic expertise and creative innovation for a standout presence in the digital landscape.</p>
           </div>
 
           <div class="card active">
-            <img src="icon/Windows 10 Personalization.png" alt="">
-            <h4>Web design</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam hic iusto quaerat eveniet</p>
+            <img src="icon/Windows 10 Personalization.png" alt="Web Design Icon">
+            <h4>Web Design</h4>
+            <p>Create a lasting impression with our captivating web designs, tailored to your unique vision and brand identity.</p>
           </div>
-
+        
           <div class="card">
-            <img src="icon/Logo.png" alt="">
-            <h4>Web design</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam hic iusto quaerat eveniet</p>
+            <img src="icon/Commercial.png" alt="Digital Marketing Icon">
+            <h4>Digital Marketing</h4>
+            <p>Drive measurable success with strategic online campaigns and targeted SEO.</p>
           </div>
-
+        
           <div class="card">
-            <img src="icon/Logo.png" alt="">
-            <h4>Web design</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam hic iusto quaerat eveniet</p>
+            <img src="icon/Logo.png" alt="Branding Icon">
+            <h4>Branding</h4>
+            <p>Build a lasting impression with distinctive brand identities and strategies.</p>
           </div>
-
+        
           <div class="card">
-            <img src="icon/Logo.png" alt="">
-            <h4>Web design</h4>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam hic iusto quaerat eveniet</p>
+            <img src="icon/Design.png" alt="UI/UX Design Icon">
+            <h4>UI/UX Design</h4>
+            <p>Ensure a seamless user experience with visually appealing interfaces.</p>
           </div>
+        
 
           <div class="card" style="opacity: 0; user-select: none;"> 
           </div>
         </section>
 
-        <section class="work">
+        <section class="work" id="work">
           <h2>Our Recent Work</h2>
           <hr>
           <div class="w-list">
@@ -527,31 +606,20 @@
               <img src="img/highlands.png" alt="">
               <div class="info">
                 <h3>Web Design & Development</h3>
-                <a href=""><b>Energy Works co</b></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque alias fuga dolores, doloribus vero harum natus sed animi ratione tempore ea reprehenderit mollitia fugiat sequi libero necessitatibus odit. Fugit, magni.</p>
-                <a href="">View all ..</a>
+                <b>Highland General Enterprises</b>
+                <p>A Contruction company aimed at building mordern infrasture in all parts of the country delivering trust and professionalism.</p>
+                <a href="">View project</a>
               </div>
             </div>
             <hr width="100%">
 
             <div class="w-card">
-              <img src="img/highlands.png" alt="">
+              <img src="img/ngo website.png" alt="">
               <div class="info">
                 <h3>Web Design & Development</h3>
-                <a href=""><b>Energy Works co</b></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque alias fuga dolores, doloribus vero harum natus sed animi ratione tempore ea reprehenderit mollitia fugiat sequi libero necessitatibus odit. Fugit, magni.</p>
-                <a href="">View all ..</a>
-              </div>
-            </div>
-            <hr width="100%">
-
-            <div class="w-card">
-              <img src="img/highlands.png" alt="">
-              <div class="info">
-                <h3>Web Design & Development</h3>
-                <a href=""><b>Energy Works co</b></a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque alias fuga dolores, doloribus vero harum natus sed animi ratione tempore ea reprehenderit mollitia fugiat sequi libero necessitatibus odit. Fugit, magni.</p>
-                <a href="">View all ..</a>
+                <b>Trophy Youth</b>
+                <p>An NGO dedicated to improving the lives of youths around Uganda and Africa in general.</p>
+                <a href="">View Project.</a>
               </div>
             </div>
 
@@ -562,24 +630,23 @@
       <footer>
         <nav>
           <div class="logo">
-            <h2>Website Logo</h2>
+            <h2>SCEC <br>TECHNOLOGIES</h2>
             <p>
-              AccountSell team reviews all accounts prior to listing them to go
-              live. The seller is free to set their own price as a
+              Let Us Fous On Tech.
+You Focus On What Truly Matters
             </p>
           </div>
           <div class="list">
-            <h3>What to buy</h3>
-            <a href="">Buy instagram account</a>
-            <a href="">Buy tiktok account</a>
-            <a href="">Buy Youtube account</a>
+            <a href="">Home</a>
+            <a href="">About Us</a>
+            <a href="">Services</a>
+            <a href="">Reviews</a>
           </div>
-          <div class="list">
-            <h3>Resources</h3>
-            <a href="">Browse</a>
-            <a href="">Login</a>
-            <a href="">Register</a>
-            <a href="">Sell</a>
+          <div class="contact-info" id="contact">
+            <h4>Contact Us</h4>
+            <p>Email: info@scec.tech</p>
+            <p>Phone: +256 752 588 683</p>
+            <p>Address: Bugiri, Kawuku, Uganda</p>
           </div>
         </nav>
         <hr
@@ -590,10 +657,10 @@
           "
         />
         <div class="pp">
-          <p>© 2022 Accoutsell.com, All rights reserved.</p>
+          <p>© 2022 SCEC.tech, All rights reserved.</p>
           <ul>
-            <li>Privacy policy</li>
-            <li>Terms of service</li>
+            <li><a href="">Privacy policy</a></li>
+            <li><a href="">Terms of service</a></li>
           </ul>
         </div>
       </footer>
